@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryddeapp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <ul class="header">
+        <li><button id="menuButton" class="menuButton">☰</button></li>
+
+        <li><h3>Hello, <span id="currentUser"></span> </h3></li>
+
+        <li><a href="profile.html"><img class="pfp" src="Images/placeholder_pfp.jpg"></a></li>
+    </ul>
+
+    <h2 class="centerText">Here you can do tasks!</h2>
+    
+    <h3 class="centerText">Choose a familymember</h3>
+    <ul class="line">
+        <li>
+            <select id="familySelect">
+            </select>  
+        </li>
+        
+        <li id="pfp-li"></li>
+
+    </ul>
+    <h3 class="centerText">Choose a task</h3>
+    <ul class="line">
+        <li>
+            <select id="taskSelect"></select>
+        </li>
+        <li>
+            <span class="taskPoints" id="taskPoints"></span>
+        </li>
+    </ul>
+
+    <button id="finishTaskBtn" class="bigButton">Finish Task</button>
+    
+    <div id="sidemenu" class="menu">
+        <h2>Menu</h2>
+        <a href="index.html" class="menu-item">Add task</a>
+        <a href="stats.html" class="menu-item">Statistics</a>
+        <a href="profile.html" class="menu-item">Profile</a>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="family.js"></script>
+</body>
+</html>

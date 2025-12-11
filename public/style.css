@@ -1,0 +1,215 @@
+body {
+    background-color: rgb(102, 164, 218);
+    font-family: "Caveat", cursive;
+    justify-content: center;
+    margin: 0; /* remove default spacing */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+.header {
+  position: fixed;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  gap: 40px; /* controls spacing between items */
+  width: 100%;
+  background-color: rgb(71, 109, 142);
+  margin-top: -20px;
+  padding: 0;
+  top: 20px;
+  list-style: none;
+  z-index: 9998;
+}
+
+.centerTextTop {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.line {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  gap: 40px; /* controls spacing between items */
+  width: 100%;
+  background-color: rgb(102, 164, 218);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.line-item {
+margin-left: 40px;
+margin-right: 40px;
+}
+
+.bigButton {
+    display: block;
+    font-family: "Caveat", cursive;
+    background-color: rgb(71, 116, 155);
+    font-size: 20px;
+    border-radius: 5px;
+    margin: 30px auto;
+
+}
+
+.centerText {
+    text-align: center;
+}
+
+.pfp {  
+  background-color: #aeaeae;
+  width: 40px;
+  height: 40px;
+  border-radius: 90px;
+}
+
+.personImage {
+    width: 150px;
+    border-radius: 10px;
+}
+
+select {
+    font-family: "Caveat", cursive;
+    background-color: rgb(71, 116, 155);
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: -300px; /* hidden off-screen */
+    width: 120px;
+    height: 100%;
+    background: rgb(71, 109, 142, 0.95);
+    padding: 20px;
+    box-shadow: 5px 0 10px rgba(0,0,0,0);
+    transition: left 0.3s ease; /* smooth slide */
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    gap: 15px;
+}
+
+/* Button default position */
+.menuButton {
+    position: relative;
+    z-index: 10000;
+    background-color: rgb(71, 116, 155);
+    border-radius: 5px;
+    transition: transform 0.3s ease, background 0.2s ease;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+}
+
+.menuButton:hover {
+    background-color: rgb(193, 226, 255);
+    transform: scale(1.05);
+}
+
+/* When the menu is open, slide button right */
+.menuButton.active {
+    transform: translateX(120px);
+}
+
+/* When active, slide into view */
+.menu.active {
+    left: 0;
+}
+
+.menu-item {
+    display: block;
+    padding: 10px 20px;
+    margin: 5px 0;
+    background-color: rgb(120, 182, 236);
+    color: black;
+    border-radius: 8px;
+    text-align: center;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.menu-item:hover {
+    background-color: rgb(193, 226, 255);
+    transform: scale(1.05);
+}
+
+.menu h2 {
+    text-align: center;
+}
+
+.taskPoints {
+    font-size: 20px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #e8cdcd;
+    min-width: 130px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+}
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+/* Style individual task entries / tables */
+.TableContainer table {
+    width: 80%;
+    margin: 16px auto;
+    border-collapse: collapse;
+    font-size: 20px;
+    background-color: rgb(120, 182, 236, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.TableContainer th {
+    background-color: rgb(120, 182, 236);
+    padding: 10px;
+    text-align: center;
+}
+
+.TableContainer td {
+    padding: 8px;
+    margin: 5px 0; 
+    background-color: rgb(193, 226, 255);
+    border-top: 2px solid rgb(120, 182, 236);
+}
+
+/* Ensure leaderboard box looks similar to tables */
+.leaderboard {
+    width: 90%;
+    margin: 20px auto;
+    background-color: rgb(120, 182, 236, 0.3);
+    padding: 10px;
+    border-radius: 12px;
+}
+
+/* Fix the leaderboard table style consistency */
+.leaderboardTable tr {
+    background-color: rgb(120, 182, 236) !important;
+    padding: 10px;
+}
+
+.leaderboardTable td {
+    background-color: rgb(193, 226, 255);
+    border-top: 2px solid rgb(120, 182, 236);
+}
+
+/* Center the h3 subtitles more nicely */
+h3.centerText {
+    margin-top: 30px;
+    font-size: 28px;
+}

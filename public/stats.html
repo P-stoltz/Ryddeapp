@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryddeapp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <ul class="header">
+        <li><button id="menuButton" class="menuButton">☰</button></li>
+
+        <li><h3>Hello, <span id="currentUser"></span> </h3></li>
+
+        <li><a href="profile.html"><img class="pfp" src="Images/placeholder_pfp.jpg"></a></li>
+    </ul>
+
+    <h1 class="centerTextTop">Check out everyones statistics!</h2>
+
+    <div id="leaderboard" class="TableContainer"></div>
+
+    <h3 class="centerText">All Finished Tasks</h3>
+
+    <div id="taskTableContainer" class="TableContainer"></div>
+    
+    <div id="sidemenu" class="menu">
+        <h2>Menu</h2>
+        <a href="index.html" class="menu-item">Add task</a>
+        <a href="stats.html" class="menu-item">Statistics</a>
+        <a href="profile.html" class="menu-item">Profile</a>
+    </div>
+
+    <script src="stats.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
