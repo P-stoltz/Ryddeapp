@@ -8,10 +8,18 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
+
 // Hent startside
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/index.html');
 });
+
+// logger
+function logger(req, res, next) {
+    console.log(req.method + " " + req.url);
+    next();
+}
+app.use(logger);
 
 app.get('/getfamilymember', (req, res) => {
     const rows = db.prepare('SELECT * FROM familymember ORDER BY id ASC').all();
@@ -22,6 +30,7 @@ app.get('/getTasks', (req, res) => {
     const rows = db.prepare('SELECT * FROM tasks ORDER BY id ASC').all();
     res.json(rows); 
 });
+
 
 // GET /leaderboard
 app.get('/leaderboard', (req, res) => {
